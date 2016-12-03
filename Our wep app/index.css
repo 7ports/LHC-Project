@@ -1,9 +1,30 @@
 body,h1
 {
-	text-align:center;
+	text-align: center;
 }
 
 h1
 {
 	background-color: #82cafa;
+}
+
+h2
+{
+	
+}
+
+.input-method-container
+{
+	display:inline-block;
+	margin:20px;
+}
+
+.input-method-text
+{
+	width:250px;
+}
+
+#import-solusUrl
+{
+	
 }
