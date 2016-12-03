@@ -71,16 +71,34 @@ function createArray(length) {
 }
 
 function time(events){
-var i;
+var i, d;
 var a = createArray(24, 7);
 for(i=0; i<events.length; i++){
+	d = events[i].end - events[i].start
 
-	a[((events[i].start)/10000)-1.3][events[i].byday - 1] = events[i].body;
+
+	a[((events[i].start)/10000)-1.3][events[i].byday] = events[i].body;
+
 
 }
 
 return a;
 }
+
+function uniqueEvents (array) {
+	var distinct = []
+	for (i= 0, i < 7, i++) 
+	{
+		for(var j =0; j<24, j++)
+		{
+			if (array[j] not in distinct)
+				distinct.push(array[i])
+		}
+	}
+return distinct;
+}
+
+
 
 function compile(events){
 	var i = 0;
